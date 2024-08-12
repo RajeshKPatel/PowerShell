@@ -1,0 +1,2 @@
+$root="D:\XYZ" #It should have path of your root directory from which you want to delete all you empty folders present in main and subdirectories
+dir $root -Directory -Recurse | where {-NOT $_.GetFiles("*","AllDirectories")} | del -Recurse
